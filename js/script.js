@@ -11,11 +11,17 @@
 
 function getStudentDiscount() {
   // input
-  var userAge = document.getElementById('age-number').value
-  var daysNumber = document.getElementById('days-number').value
+  const userAge = parseInt(document.getElementById('age-number').value);
+  const daysNumber = document.getElementById('days-number').value;
 
-  // process and output
-  if (day == "tuesday") || day == "thursday" || (userAge > 12 && userAge < 21)) {
+  // process
+  if (daysNumber === 'Tuesday' || daysNumber === 'Thursday' || (userAge > 12 && userAge < 21)) {
+    // output
     document.getElementById('result').innerHTML = 
-    "You get the student discount for the museum."
+    "You get the student discount for the museum.";
+  } else {
+    // output
+    document.getElementById('result').innerHTML = 
+    "You pay the regular price";
   }
+}
